@@ -4,6 +4,8 @@ metadata:
   name: {{ include "example.fullname" . }}
   labels:
 {{ include "example.labels" . | indent 4 }}
+  annotations:
+{{ include .Values.service.annotations . | indent 4 }}
 spec:
   type: {{ .Values.service.type }}
   ports:

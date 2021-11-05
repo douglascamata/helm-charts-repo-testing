@@ -34,6 +34,15 @@ securityContext: {}
 service:
   type: ClusterIP
   port: 80
+  annotations:
+    a8r.io/rollouts.scm.branch: "main"
+    a8r.io/rollouts.scm.path: "charts/example-v2"
+    a8r.io/rollouts.scm.type: "github"
+    a8r.io/repository: "git@github.com:douglascamata/helm-charts-repo-testing.git"
+    a8r.io/rollouts.image-repo.type: "dockerhub"
+    a8r.io/rollouts.image-repo.name: "nginx"
+    a8r.io/rollouts.deployment: "ac-my-nginx-from-helm-gitops-example-v2-default"
+    a8r.io/rollouts.mappings: "ac-my-nginx-from-helm-gitops-example-v2-default"
 
 ingress:
   enabled: false
