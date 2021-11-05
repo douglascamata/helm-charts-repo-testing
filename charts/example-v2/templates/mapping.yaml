@@ -1,0 +1,7 @@
+apiVersion: getambassador.io/v3alpha1
+kind:  Mapping
+metadata:
+  name: {{ include "example.fullname" . }}
+spec:
+  prefix: /example-v2/
+  service: {{ include "example.fullname" . }}.{{ .Release.Namespace }}
