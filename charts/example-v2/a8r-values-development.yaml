@@ -1,0 +1,39 @@
+ambassador:
+  rollouts:
+    annotations:
+      getambassador.io/rolloutId: 8794d643-9c55-4ed3-be21-f259b6e3f867
+    image:
+      repository: library/nginx
+      tag: library/nginx:latest
+    replicas: 2
+    steps:
+    - setWeight: 10
+    - pause:
+        duration: 12
+    - setWeight: 20
+    - pause:
+        duration: 12
+    - setWeight: 30
+    - pause:
+        duration: 12
+    - setWeight: 40
+    - pause:
+        duration: 12
+    - setWeight: 50
+    - pause:
+        duration: 12
+    - setWeight: 60
+    - pause:
+        duration: 12
+    - setWeight: 70
+    - pause:
+        duration: 12
+    - setWeight: 80
+    - pause:
+        duration: 12
+    - setWeight: 90
+    - pause:
+        duration: 12
+    - setWeight: 100
+    - pause:
+        duration: 12
